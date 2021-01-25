@@ -95,7 +95,7 @@ let  s:ColourAssignment['CursorLineNr']  =  {'GUIFG':  'White'}
 let  s:ColourAssignment['CursorColumn']  =  {'GUIBG':  'DarkGrey'}
 let  s:ColourAssignment['Folded']        =  {'GUIFG':  'DarkGrey',      'GUIBG':  'Black'}
 let  s:ColourAssignment['FoldColumn']    =  {'GUIBG':  'DarkGrey'}
-let  s:ColourAssignment['SignColumn']    =  {'GUIBG':  's:gui_dark'}
+let  s:ColourAssignment['SignColumn']    =  {'GUIBG':  s:gui_dark}
 
 
 " Window/Tab delimiters
