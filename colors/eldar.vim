@@ -64,6 +64,8 @@ let s:magenta   = get(g:, 'eldar_magenta', '#AD7FA8')
 let s:gui_text  = get(g:, 'eldar_text', 'White')
 let s:gui_bg    = get(g:, 'eldar_background', 'Black')
 
+let s:gui_dark  = get(g:, 'eldar_background', '#2E3436')
+
 " Terminal colors
 let s:term_text  = get(g:, 'eldar_term_text', 'NONE')
 let s:term_bg    = get(g:, 'eldar_term_background', 'NONE')
@@ -83,7 +85,7 @@ let s:ColourAssignment = {}
 " ---------------
 let  s:ColourAssignment['Normal']        =  {'GUIFG':  s:gui_text,  'GUIBG':  s:gui_bg,  'CTERMBG':  s:term_bg,  'CTERMFG':  s:term_text}
 let  s:ColourAssignment['Cursor']        =  {'GUI':    'Reverse'}
-let  s:ColourAssignment['CursorLine']    =  {'GUI':    'NONE',      'GUIBG':  'NONE'}
+let  s:ColourAssignment['CursorLine']    =  {'GUI':    'NONE',      'GUIBG':  s:gui_dark}
 let  s:ColourAssignment['LineNr']        =  {'GUIFG':  'DarkGray'}
 let  s:ColourAssignment['CursorLineNr']  =  {'GUIFG':  'White'}
 
@@ -93,13 +95,13 @@ let  s:ColourAssignment['CursorLineNr']  =  {'GUIFG':  'White'}
 let  s:ColourAssignment['CursorColumn']  =  {'GUIBG':  'DarkGrey'}
 let  s:ColourAssignment['Folded']        =  {'GUIFG':  'DarkGrey',      'GUIBG':  'Black'}
 let  s:ColourAssignment['FoldColumn']    =  {'GUIBG':  'DarkGrey'}
-highlight! link SignColumn FoldColumn
+let  s:ColourAssignment['SignColumn']    =  {'GUIBG':  's:gui_dark'}
 
 
 " Window/Tab delimiters
 " ---------------------
 let  s:ColourAssignment['VertSplit']    =  {'GUIFG':  'White',     'GUIBG':  'NONE'}
-let  s:ColourAssignment['ColorColumn']  =  {'GUIBG':  'DarkGray'}
+let  s:ColourAssignment['ColorColumn']  =  {'GUIBG':  s:gui_dark}
 let  s:ColourAssignment['TabLine']      =  {'GUIFG':  'White',     'GUIBG':  'DarkGray'}
 let  s:ColourAssignment['TabLineFill']  =  {'GUIBG':  'DarkGray'}
 let  s:ColourAssignment['TabLineSel']   =  {'GUIFG':  'Black',     'GUIBG':  'Gray'}
